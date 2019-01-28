@@ -1,0 +1,122 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canil Cãopesino</title>
+<link href="css/estilolocal.css" type="text/css" rel="stylesheet"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel="stylesheet" type='text/css'>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css">
+<link rel="icon" href="img/icone.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="img/icone.ico" type="image/x-icon" />
+<style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+		position:relative;
+		width:85%;
+        height: 100%;
+		border:1px double black;
+		left:70px;
+      }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="grama">
+    
+    </div>
+    <div id="geral">
+    	<header id="cabecalho"> 
+        <span class="logo"><img src="img/logo.png"/></span>
+  		<div id="menu">        
+            <ul>
+                <li class="hvr-underline-reveal "><a href="index.html">Home</a></li>         
+                <li class="hvr-underline-reveal" ><a href="hospedagem.html">Hospedagem</a></li>
+                <li class="hvr-underline-reveal " id="local"><a href="localizacao.html">Localização</a></li>
+                <li class="hvr-underline-reveal "><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>    
+        </>    
+    </header>
+    
+    
+    <div id="banner"> 
+    <img src="img/Banner.png" id="capa"/>
+
+    </div>
+    
+    <div id="roda">
+    	
+      <div id="Texto"> 
+          <h2><center> Localização </center></h2>
+          <p align="justify" id="textohospedagem"><center>Veja abaixo como chegar no nosso canil, localizado na cidade de Pelotas-RS, rua Prolongamento da Uruguai 61, bairro Simões Lopes.</center></p>        
+          <br/>
+          <a href="index.html" class="hvr-icon-back" id=voltar>Voltar</a>
+
+        </div> 
+    	
+       <div id="conteudolocal">
+            <div id="map"></div>
+    <script>
+
+// This example displays a marker at the center of Australia.
+// When the user clicks the marker, an info window opens.
+
+function initMap() {
+  var uluru = {lat: -31.773612, lng: -52.353541};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 14,
+    center: uluru
+  });
+
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Canil Cãopesino</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Canil Cãopesino</b>, estética canina e hospedagem de animais. Rua Prolongamento da Uruguai,61 . Bairro Simões Lopes</p>'+
+      '<p>8403-4404 / 3227-5386 </p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+    title: 'Canil Cãopesino'
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+}
+    </script>
+    
+                
+       </div>
+        
+      <div id="servicos4">
+        <a href="contato.html"> <img src="img/contatoimagem.jpg" id="fotocontato"/> </a>
+        <a href="contato.html" <h5 id="textocontato" class="hvr-icon-grow-rotate">Entre em Contato Conosco</font></h5></a>
+
+      </div>
+        
+    </div>
+    
+    </div>
+
+    <div id="creditos">
+      <center>Canil Cãopesino - Todos os direitos reservados © 2009 - 2016 </center>
+    </div>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIe6bxw0ewGl4mD5a0KAFF8AOBQnx2R4E&signed_in=true&callback=initMap"></script>
+</body>
+</html>
